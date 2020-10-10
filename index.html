@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
+  <title>Report On Corona Virus</title> 
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+        .button 
+			{
+				background-color: black;
+				border: none;
+				color: white;
+				padding: 20px 34px;	
+				padding-top: auto;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 20px;
+				margin: 200px 10px;
+				cursor: pointer;
+				position: center;
+			}
+			/* Z-Index Properties */
+		img 
+			{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				z-index: -1;
+			}
+		body 
+			{
+				background-image: url('https://i.imgur.com/TBdHFmk.jpg');
+				background-repeat: no-repeat;
+				background-attachment: fixed; 
+				background-size: cover;
+			}
+			
+			
+			
+		#demotext 
+			{
+				color: #FFFFFF;
+				background: #232323;
+				text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+				color: #FFFFFF;
+				background: #232323;
+				text-align:center;
+				margin: absolute;
+				width: 0px;
+				height: 0px;
+			}
+
+/* image background */
+		#imageonly 
+			{
+				background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/confectionary.png);
+			}
+
+/* linear gradient background */
+		#linear-gradient 
+			{
+				background: linear-gradient(black, white);
+			}
+
+/* radial gradient background */
+		#radial-gradient 
+			{
+				background: radial-gradient(circle, white, black);
+				background-position:center;
+				text-align:center ;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				right: 50%;
+				bottom: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+/*multiple background images */
+
+		#multiimage 
+			{
+				background: 
+				url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/codepen.png) bottom center no-repeat,
+				url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/confectionary.png) repeat; 
+			}
+
+/* styling for the Pen, unrelated to background canvas editing */
+ 
+		div 
+			{
+				width: 500px;
+				height: 500px;
+				align:center;
+				margin:0 auto;
+			}
+		footer 
+			{
+				background-color: transparent;
+				padding: 5px;
+				margin-top: 485px;
+				margin-bottom: 1px;
+				text-align: center;
+				color: #FFFFFF;
+				background: #ffffff00;
+				text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+				color: white;
+				background: #ffffff00;
+				
+				
+			}
+		header 
+			{
+				background-color: transparent;
+				text-align: center;
+				font-size: auto;
+				color: white;
+				text-shadow: 10px;
+				text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+			}
+		@font-face {
+				font-family: Hacked; /* Custom webfont */
+				src: url(https://hackedfont.com/HACKED.ttf);
+			}
+		code 
+			{
+				font-family: Hacked, monospace; /* custom webfont hacked */
+			}
+		file
+			{
+				background-color: transparent;
+				padding: 5px;
+				margin-top: 535px;
+				margin-bottom: 1px;
+				text-align: auto;
+				color: #FFFFFF;
+				background: #ffffff00;
+				text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+				color: #FFFFFF;
+				background: #ffffff00;
+			}
+			
+	
+
+		#center 
+			{
+				width: 600px;
+				height: 40px;
+				position: absolute;
+				left: 50%;
+				top: 50%; 
+				margin-left: -300px;
+				margin-top: 50px;
+				background: rgba(0,0,0,1);
+				border: 2px solid rgba(255,255,255,1);
+				border-radius: 5px;
+				box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.2);
+			}
+
+		#main 
+			{
+				width: 200px;
+				height: 40px;
+				background: #92c81a;
+				float: left;
+				animation: stretch 5s infinite linear;
+			}
+
+		.row 
+			{
+				height: 10px;
+				width: 400px;
+				float: left;
+				display: inherit;
+				animation: squeeze 5s infinite linear;
+			}
+
+		.sq 
+			{
+				height: 10px;
+				width: 10px;
+				float: left;
+			}
+
+#sq-2 { background: #4A672F;}
+#sq-3 { background: #1D2019;}
+#sq-6 { background: #2C341C;}
+#sq-1, #sq-5, #sq-9 {
+  background: #74B215;
+}
+#sq-4, #sq-8, #sq-12 {
+  background: #7BC415;
+}
+
+#sq-7, #sq-10, #sq-11 {
+  background: #92C81A;
+}
+
+@keyframes stretch {
+	0% {width: 200px;}
+  25% {width: 280px;}
+  50% {width: 360px;}
+  75% {width: 240px;}
+	100% {width: 200px;}
+}
+@keyframes squeeze {
+	0% {width: 400px;}
+  25% {width: 320px;}
+  50% {width: 140px;}
+  75% {width: 360px;}
+	100% {width: 400px;}
+}
+
+
+</style>
+</head> 
+<body> 
+<code>
+<header>
+<h1>😈 ~HACK3R_ONENESS 😈</h1>
+</header>
+<!-- <img s rc="https://creativecommons.org/wp-content/uploads/2019/10/cc-sticker-2007.png" width="100" height="100">-->
+ <div id="demotext"> 
+   <div id="radial-gradient"> 
+   > <a href="https://youtu.be/ksZ9mn-7ups" class="button" alt="Hack3r_Oneness">Watch This Video Now</a>
+  <
+   </div>
+  </div> 
+
+  <file>
+ <!-- https://i.imgur.com/JoyRqGe.png-->
+ <center>
+ <code>QW5zd2VyIHRoZSBxdWVzdGlvbnMgOiAKMS4gQ1lCM1IgVzBSMUQKMi4gNCAKMy4gTjAwQiBIQUNLM1JTIENPTU1VTklUWSAKNC4gSEFDSzNSXzBORU5FU1MsIFAxWVVTSCBLNFVTSDFLIAoK</code></center>
+  <div id="center">
+
+  <div id="main"> </div>
+  <div class="row" id="r-one">Hacking.Into.Your.System
+    <span class="sq" id="sq-1"></span>
+    <span class="sq" id="sq-2"></span>
+    <span class="sq" id="sq-3"></span>
+  </div>
+  <div class="row" id="r-two">
+    <span class="sq" id="sq-4"></span>
+    <span class="sq" id="sq-5"></span>
+    <span class="sq" id="sq-6"></span>
+  </div>
+  <div class="row" id="r-three">
+    <span class="sq" id="sq-7"></span>
+    <span class="sq" id="sq-8"></span>
+    <span class="sq" id="sq-9"></span>
+  </div>
+  <div class="row" id="r-four">
+    <span class="sq" id="sq-10"></span>
+    <span class="sq" id="sq-11"></span>
+    <span class="sq" id="sq-12"></span>
+  </div>
+</div>
+
+
+</file>
+  <footer>
+  <img src="https://creativecommons.org/wp-content/uploads/2019/10/cc-sticker-2007.png" width="100" height="100" >
+<p>> CopyRight &copy; 2020 Under Creative Commons(CC). Designed By - Hack3r_Oneness 😈 <</p>
+ 
+  
+ </footer>
+
+ </code>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="Sumi Kumar, Hack3r, Hack3r Oneness, Hack3r_Oneness, Sumit Oneness, Hack3r, Indian Hack3r, Cyber Security, Cyber World Org, NHC, CWO, noob hack3rs community, CCA, cyber Crime Agency, Cyber Suraksha, Cyber Salvager">
+      <meta name="description" content="Hack3r Oneness.">
+      <title>Sumit Oneness - ~Hack3r_Oneness</title>
+      <link rel="shortcut icon" href="https://www.sumitoneness.me/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="https://www.sumitoneness.me/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="./Sumit Oneness - files/main.min.css">
+      <link rel="stylesheet" href="./Sumit Oneness - files/theme.min.css">
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script type="text/javascript" async="" src="./Sumit Oneness - files/analytics.js.download"></script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-NERC7HG7DV"></script>
+
+      <!-- <script async="" src="./Sumit Oneness - files/js"></script> -->
+      <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NERC7HG7DV');</script><style>@media print {#ghostery-purple-box {display:none !important}}</style>
+
+   </head><script type="text/javascript">(function(canvas, canvasfont, webgl, browserplugins) {
+        function processFunctions(scope, type) {
+            /* Browser Plugins */
+            if (browserplugins == 'true') {
+                scope.Object.defineProperty(navigator, "plugins", {enumerable: true, configurable: true, get: function() {
+                    return "";
+                }});
+            }
+            /* Canvas */
+            if (canvas != 'false') {
+                var fakecanvas = scope.document.createElement('canvas');
+                fakecanvas.className = 'jbsecurity_canvas';
+                if (canvas == 'random' && type == 'frame') {
+                    var fakewidth = fakecanvas.width = Math.floor(Math.random() * 999) + 1;
+                    var fakeheight = fakecanvas.height = Math.floor(Math.random() * 999) + 1;
+                }
+                var canvas_a = scope.HTMLCanvasElement;
+                var origToDataURL = canvas_a.prototype.toDataURL;
+                var origToBlob = canvas_a.prototype.toBlob;
+
+                if(type != 'window') {
+                    canvas_a.prototype.toDataURL = function() {
+                        if (canvas == 'block') return false;
+                        else if (canvas == 'blank') {
+                            fakecanvas.width = this.width;
+                            fakecanvas.height = this.height;
+                            return origToDataURL.apply(fakecanvas, arguments);
+                        } else if (canvas == 'random') {
+                            return origToDataURL.apply(fakecanvas, arguments);
+                        }
+                    };
+                    canvas_a.prototype.toBlob = function() {
+                        if(type == 'window') return;
+                        if (canvas == 'block') return ;
+                        else if (canvas == 'blank') {
+                            fakecanvas.width = this.width;
+                            fakecanvas.height = this.height;
+                            return origToBlob.apply(fakecanvas, arguments);
+                        } else if (canvas == 'random') {
+                            return origToBlob.apply(fakecanvas, arguments);
+                        }
+                    };
+
+                    var canvas_b = scope.CanvasRenderingContext2D;
+                    var origGetImageData = canvas_b.prototype.getImageData;
+                    canvas_b.prototype.getImageData = function() {
+                       if (canvas == 'block') return false;
+                        else if (canvas == 'blank') {
+                            fakecanvas.width = this.width;
+                            fakecanvas.height = this.height;
+                            return origGetImageData.apply(fakecanvas.getContext('2d'), arguments);
+                        } else if (canvas == 'random') {
+                            return origGetImageData.apply(fakecanvas.getContext('2d'), [Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1, Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1]);
+                        }
+                    }
+                    var origGetLineDash = canvas_b.prototype.getLineDash;
+                    canvas_b.prototype.getLineDash = function() {
+                        if (canvas == 'block') return false;
+                        else if (canvas == 'blank') {
+                            fakecanvas.width = this.width;
+                            fakecanvas.height = this.height;
+                            return origGetLineDash.apply(fakecanvas.getContext('2d'), [0, 0]);
+                        } else if (canvas == 'random') {
+                            if(type == 'window') return false;
+                            return origGetLineDash.apply(fakecanvas.getContext('2d'), [Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1]);
+                        }
+                    }
+                    var canvas_c = scope.WebGLRenderingContext;
+                    var origReadPixels = canvas_c.prototype.readPixels;
+                    canvas_c.prototype.readPixels = function() {
+                        if (canvas == 'block') return false;
+                        else if (canvas == 'blank') {
+                            fakecanvas.width = this.width;
+                            fakecanvas.height = this.height;
+                            return origReadPixels.apply(fakecanvas.getContext('webgl'), arguments);
+                        } else if (canvas == 'random') {
+                            if(type == 'window') return false;
+                            return origReadPixels.apply(fakecanvas.getContext('webgl'), [Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1, Math.floor(Math.random() * fakewidth) + 1, Math.floor(Math.random() * fakeheight) + 1, arguments[4], arguments[5], arguments[6]]);
+                        }
+                    }
+                }
+            }
+            /* Canvas Font */
+            if (canvasfont == 'true') {
+                var canvasfont_a = scope.CanvasRenderingContext2D;
+                canvasfont_a.prototype.measureText = function() {
+                    return false;
+                }
+            }
+            /* WebGL */
+            if (webgl == 'true') {                
+                var webgl_a = scope.HTMLCanvasElement;
+                var origGetContext = webgl_a.prototype.getContext;
+                webgl_a.prototype.getContext = function(arg) {
+                    if (arg.match(/webgl/i)) {
+                        webgl_triggerblock.title = 'getContext';
+                        return false;
+                    }
+                    return origGetContext.apply(this, arguments);
+                }
+            }
+        }
+        processFunctions(window, 'window');
+        var iwin = HTMLIFrameElement.prototype.__lookupGetter__('contentWindow'), idoc = HTMLIFrameElement.prototype.__lookupGetter__('contentDocument');
+        if(iwin) {
+            Object.defineProperties(HTMLIFrameElement.prototype, {
+                contentWindow: {
+                    get: function() {
+                        var frame = iwin.apply(this);
+                        if (this.src && this.src.indexOf('//') != -1 && location.host != this.src.split('/')[2]) return frame;
+                        try { frame.HTMLCanvasElement } catch (err) { return }
+                        processFunctions(frame, 'frame');
+                        return frame;
+                    }
+                },
+                contentDocument: {
+                    get: function() {
+                        if (this.src && this.src.indexOf('//') != -1 && location.host != this.src.split('/')[2]) return idoc.apply(this);
+                        var frame = iwin.apply(this);
+                        try { frame.HTMLCanvasElement } catch (err) { return }
+                        processFunctions(frame, 'frame');
+                        return idoc.apply(this);
+                    }
+                }
+            });
+        }
+    })('random','false','false','false');</script>
+   <body>
+      <div class="piece output">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <br>
+                  <div class="theme-switch-wrapper">
+                     <label class="theme-switch" for="checkbox">
+                     <input type="checkbox" id="checkbox">
+                     <span class="slider round"></span>
+                     </label>
+                     <em><span id='k'>Enable Hacker Mode!</span></em>
+                  </div>
+                  <br>
+                  <div class="jumbotron al-center">
+                     <script data-pagespeed-no-defer="">//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','https://www.sumitoneness.me/','oG-7lxx8_G',true,false,'s8evehyaLlA');
+//]]></script><img id="pic" src="./Sumit Oneness - files/img.jpg" alt="Sumit Oneness" class="img-fluid rounded" width="500" height="500" data-pagespeed-url-hash="3409650996" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><br><br>
+                     <h1 id="glitch" data-text="Sumit Oneness (~Hack3r_Oneness)" class=""><strong>Sumit Oneness (~Hack3r_Oneness)</strong></h1>
+                     <p class="lead">Cyber Security Enthusiast & Cyber Crime Investigator</p>
+                     <hr>
+                     <p>sumit.antiphing@gmail.com | M. +91 9718067660</p>
+                     <center>
+                  <a href="https://www.facebook.com/sumitraj" target="_blank" class="ico icon-facebook" title="Facebook"></a>
+                     <a href="https://www.twitter.com/oneness_sumit" target="_blank" class="ico icon-twitter" title="Twitter"></a>
+                     <a href="https://www.linkedin.com/in/sumit-k-a30926158/" target="_blank" class="ico icon-linkedin" title="LinkedIn"></a>
+                     <a href="https://www.youtube.com/channel/UCIpL3OHvksah8xtc1qmYn-g" target="_blank" class="ico icon-youtube" title="YouTube"></a>
+                     <a href="https://www.instagram.com/hack3r_oneness" target="_blank" class="ico icon-instagram" title="Instagram"></a>
+                     <a href="https://www.github.com/Hack3rOneness" target="_blank" class="ico icon-github" title="GitHub"></a>
+                     <a href="https://www.medium.com/@hack3r_oneness" target="_blank" class="ico icon-medium" title="Medium"></a>
+
+
+                   </center>
+                  </div>
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title"><strong>ABOUT ME</strong></h5>
+                        <p class="card-text">Welcome to my personal website!<br>
+                           I am Sumit Oneness <strong>(a.k.a <span id='k'>~Hack3r Oneness</span>)</strong>, I'm the person who believe in himself and love to accept challenges!.
+                           And I'm Self learner, Strong Decision Maker, innovative with the technologies and hardworking.
+                           <p>
+                            I'm passionate about Cyber Crimes investigation, Cyber & Digital Forensics, Pen-testing, Bug Bounty, Cyber Security, Ethical Hacking & Programming in specific programming languages like C, PHP, JavaScript, Curl, Java, Most likely Python 2-3.x and designing languages HTML, CSS, Linux, system administrator and vulnerability assessment.
+                            </p><p>
+                            I spend most of the time in doing pen-testing, surfing internet, CTF playing, programming and developing something innovative. I'm always keep myself as excited for new things that recently comes to my mind.
+                          </p>
+                           </p>
+                           <p>
+                        </p>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title"><strong>EXPERIENCE</strong></h5>
+                        <p class="card-text">
+                          <strong>CEO & Founder at Cyber World Organisation - CWO : Present</strong></p>
+                          <ul>
+                            <li>Cyber World Organisation - New Delhi, India
+                              <br><center>
+                              <a href="https://www.linkedin.com/company/cyber-world-org/" target="_blank">
+                              <img src="https://github.com/Hack3rOneness/Sumit-Oneness/blob/main/CWO%20-%20LOGO.png?raw=true" alt="CWO" width="100" height="100"></a>
+                              <strong><p>Cyber World Organisation</p></strong></center>
+                            </li>
+                          </ul>
+
+                        <p class="card-text">                        
+                          <strong>Cyber Crime Investigator & Core Team Member At : </strong></p>
+                        
+                        <ul>                          
+                            <li>Anti Cyber Crime Society - Pune, India.
+                              <br><center>
+                              <a href="https://www.anticybercrime.org/" target="_blank">
+                              <img src="https://media-exp1.licdn.com/dms/image/C560BAQGC-ViUvFcN4Q/company-logo_200_200/0?e=1611792000&v=beta&t=0VRkUrbIzYjJ88XP3aCQECrC-ynwdF6PQQWhrHNsQAY" alt="Anti Cyber Crime  Society" width="120" height="120"></a>
+                              <strong><p>Anti Cyber Crime Society</p></strong></center>
+                            </li>
+                            <li>BeFojji Operation Security Squad (OpSec) India.<br>
+                              <center><a href="https://befojji.in/" target="_blank"><img src="https://befojji.in/wp-content/uploads/2017/10/logo-befojji-1.png" alt="BeFojji" width="120" height="120">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8ERiPBaHpmYFy13XTy8QpJu13HlE8JXjxCQ&usqp=CAU" alt="BeFojji-Opsec" width="100" height="100"></a>
+                                <strong><p>BeFojji & BeFojji Operation Security Squad (OpSec)</p></strong>
+                              </center>
+                            </li>
+                          </ul>
+                            <hr>
+
+                        <p class="card-text">                        
+                          <strong>Infosec Trainings & Internships : 
+                          </strong>
+                        </p>
+                          <ul>
+                            <li>Summer Training At Office Commissioner of Police, Gurugram, Haryana.</li>
+                            <tr>Under <strong>Mr. Rakshit Tandon</strong> in 2019.
+                            </tr>
+                            <br>
+                            <center>
+                              <a href="http://gurgaon.haryanapolice.gov.in/index.htm" target="_blank">
+                              <img src="http://gurgaon.haryanapolice.gov.in/writereaddata/images/logo.jpg" alt="Commissioner of Police" width="auto" height="120"></a>
+                              <strong><p>Office Commissioner of Police</p></strong>
+                            </center>
+                          </ul>
+                          <ul>
+                            <li>Cyber Peace Foundation - Ranchi, Jharkhand.</li>
+                            <tr>Under <strong>Mr. Vineet Kumar - President</strong> at<small> Cyber Peace Foundation,</small> in 2020.</tr><br>
+                            </tr>
+                              <br><center>
+                              <a href="https://www.cyberpeace.org/" target="_blank">
+                              <img src="./Sumit Oneness - files/cpf.png" alt="Cyber Peace Foundation" width="auto" height="100"></a>
+                              <strong><p>Cyber Peace Foundation</p></strong>
+                            </center>
+                            <hr>
+                            <li>Web Penetration Tester at <strong>HackerOne Inc. </strong>& <strong>BugCrowd</strong>
+                            </li>
+                            <li>Cyber Crime Analyst</li>
+                            <li>Core Expertise in <strong>
+                            IoT (Internet of things) & Big Data.</strong></li>
+                            <li>Real Time CTF Player & Core Member at <strong>N00B_4rMY</strong></li>
+                        </ul>  
+                     </div>
+                  </div>
+                  <br>
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title"><strong>TECHNICAL</strong></h5>
+                        <p class="card-text"></p>
+                        <ul>
+                           <li><strong>Languages</strong>: Excellent - HTML, CSS, Python, Django; Intermediate - C, JavaScript, Java;</li>
+                           <li><strong>Databases</strong>: SQL & MYSQL</li>
+                           <li><strong>Operating Systems</strong>: Linux including Kali, Ubuntu, Parrot Security OS; Windows XP/7/10; Windows Server 2003/2008/2012; </li>
+                           <li><strong>Tools</strong>: Nmap, Burp Suite Professional etc.</li>
+                           <li><strong>Virtualization</strong>: System, Network, OS and all type of virtualization. Using Vmware or Virtual Box.
+                            <li><strong>Hardware Penetration Testing </strong>: IoT - Internet of Things Security</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title"><strong>EDUCATION</strong></h5>
+                        <p class="card-text">
+                          <ul>
+                            <li>Pursuing Bachelor's of Technology (B.Tech, CSE - IoT) from SPSU, Udaipur, Rajasthan. 2017 - 2021
+                            <br>
+                        </p>
+                      </li>
+                        <li>
+                        <p class="card-text">Pursuing Bachelor's Degree (B.Sc) from Indra Gandhi National Science (IGNOU) 2020 - 2022</p>
+                        </li>
+                        </ul> 
+                     </div>
+                  </div>
+                  <br>
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title"><strong>CERTIFICATIONS</strong></h5>
+                        <ul>
+                          <li><p class="card-text">CNSS - <strong>Certified Network Security Specialist</strong> from <strong>ICSI International Cybersecurity Institute, UK. - <a href="https://www.credential.net/13ebc69a-1d27-4ecc-8c4f-18d0fa86e34d" target="_blank">View Certificate
+                          </strong></a></p>
+                          </li>
+                          <li>
+                            <p class="card-text"><strong>
+                            AccessData Certified Investigator - Digital Forensics</strong> from <strong>AccessData - <a href="https://drive.google.com/file/d/1VYyMkLfcuHnBhpkUr2hXNyuULcMZE2wo/view?usp=sharing" target="_blank">View Certificate</strong></a></p>
+                          </li>
+                          <li>
+                            <p class="card-text"><strong>Autopsy Digital Forensics - Basis Technology - <a href="https://www.credential.net/3c80e242-9465-4195-b380-9035887a05db" target="_blank">View Certificate</a></strong></p>
+                          </li>
+                          
+                          <li>
+                            <p class="card-text"><strong>NSE 2 Network Security Associate certified</strong> from <strong> Fortinet NSE Institute - <a href="https://drive.google.com/file/d/1BYZIshfckd8zTRWJaiggjM9OCHa1ZohC/view?usp=sharing" target="_blank">View Certificate</a></strong></p>
+                          </li>
+
+                          <li>
+                            <p class="card-text">Certified from <strong>US Department of Homeland Security</strong> On<em> National Cybersecurity & Communications Integration Center Industrial Control Systems</em> from <strong> IACET - <a href="https://drive.google.com/file/d/1oAvNSlJfdoT9rl5W_-omVyCb84fTwife/view?usp=sharing" target="_blank">View Certificate</a></strong> CEUs Awarded: 0.10 from IACET</p>
+                          </li>
+                          <li>
+                            <p class="card-text">Certified for <strong>Communication & Network Security | CompTIA Cloud+ | Kali Linux Fundamentals</strong> from -<strong> Cybrary Inc. - <a href="https://drive.google.com/drive/folders/1jc55veRAGYgVWkAC2mGEOGy5P9IvNw8H?usp=sharing" target="_blank">View Certificate</a></strong></p>
+                          </li>
+
+                          <li>
+                            <p class="card-text">Certified for <strong>Introduction to IoT</strong> from -<strong> Cisco Networking Academy - <a href="https://drive.google.com/file/d/1SW_a0FCyZ050xfqOY4Luh22beWqIws7V/view?usp=sharing" target="_blank">View Certificate</a></strong></p>
+                          </li>
+
+                          <li>
+                            <p class="card-text">Certified for <strong>Kubernetes in Google Cloud | Google Cloud Essentials | Cloud Hero: Application Development</strong> from -<strong> Google Cloud Platform. | QwikLabs - <a href="https://www.qwiklabs.com/public_profiles/f3f030fb-1a55-46aa-99f8-b0f7443e90e3" target="_blank">View Badges</a></strong></p>
+                          </li>
+                          <li>
+                            <p class="card-text">Certified as <strong>Certified Mobilyze Operator</strong> from <strong>BlackBag Technology - <a href ="https://drive.google.com/drive/folders/1J49bf3iuy43BFFDzE48mzgYQDQGcF5U1?usp=sharing" target="_blank">View Certificate</a></strong></p>
+                          </li>
+                          <li>
+                            <p class="card-text">Certificate of Completion <strong>Virtualization for Beginners</strong> from <strong>Vmware IT Academy - <a href ="https://drive.google.com/file/d/1p8hir5zNJMEli0WBaSmhEEkBJbioSBLY/view?usp=sharing" target="_blank">View Certificate</a></strong></p>
+                          </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title"><strong>ACTIVITIES AND ACHIEVEMENTS</strong></h5>
+                        <p class="card-text"></p>
+                        <ul>
+                          <li>I Won this National Conclave on <strong>Cyber Policing Best Practices Meet 2.0 : OSINT CTF - 2020</strong> Organised By <strong>Centre for Research on Cyber Intelligence and Digital Forensics (CR-CIDF) - <a href="https://drive.google.com/file/d/1KWKmivNA86O-Sw3DzBXNvE6NCTMryPnR/view?usp=sharing" target="_blank">View Certificate</a></strong>
+                          </li>
+
+                           <li>Awarded by Commissioner of Gurugram, Haryana on Successfully got selected for <strong>Best Project of the Internship.</strong></li>
+
+                           <li>IIT-DELHI (IoT-WORKSHOP) Held By RoboSapiens Pvt. Ltd</li>
+                           <li>Training - Introduction to Cybersecurity & Cyber Attacks - <strong>Gujrat Forensics Science University (GFSU) - <a href="https://drive.google.com/file/d/1dxAO3H9cck78rEfcnsftYdjjpjpnRWv9/view?usp=sharing" target="_blank">View Certificate</a></strong></li>
+                           <li>Badge : <strong>Blockchain Essentials</strong> - IBM Cognitive Class.AI</li>
+                           
+                           <li>Successfully Attended Online Training On <strong>Migrating To Google Cloud</strong> from 
+                            <strong>Google Cloud Platform - <a href="https://cdn.discordapp.com/attachments/698842041571999746/758291940550377472/Screenshot_400.png" target="_blank">View Certificate</a></strong></li>
+                           <li>Successfully Completed Online Course On <strong>LinkedIn Marketing Course: Get Profit From The Business Social Networks</strong> from 
+                            <strong>BitDegree Foundation VSI @ - <a href="https://drive.google.com/drive/folders/1wMCBXGHcNPBrbnyWdTnNdmAcqFOcD_-B?usp=sharing" target="_blank">View Certificate</a></strong>
+                          </li>
+
+                           <li>Achieved 15th Position at <strong>HACON 20 CTF</strong> Conducted By <strong>Hac-Security - <a href="https://drive.google.com/file/d/1BxKsudNxhNXcytqtcMbJskU1tF82KVit/view?usp=sharing" target="_blank">View Certificate</a></strong>
+                          </li>
+                            
+                        </ul>
+                     </div>
+                  </div>
+                  <br>
+                 <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title"><strong>PROJECT</strong></h5>
+                        <p class="card-text">Will be added soon.....</p>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title"><strong>CTF & PRACTICE ENVIRONMENT</strong></h5>
+                          <p class="card-text">
+                          <ul>
+                          <strong><li>TryHackMe Profile : </li></strong><script src="https://tryhackme.com/badge/27531"></script>
+                          <hr>
+                          <strong><li>Hack The Box Profile : </li></strong>
+                          <script src="https://www.hackthebox.eu/badge/178530"></script>
+                        </ul>
+                        </p>
+                     </div>
+                  </div>
+
+                  <br>
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title"><strong>PERSONAL INFORMATION</strong></h5>
+                        <p class="card-text"></p>
+                        <ul>
+                           <li><strong>Date of Birth</strong>: October 19, 1998</li>
+                           <li><strong>Place of Birth</strong>: New Delhi, India</li>
+                           <li><strong>Nationality</strong>: Indian 🇮🇳</li>
+                           <li><strong>Languages</strong>: Hindi and English</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <br>
+                  <p class="text-secondary">Feel free to send me a message if you have any questions or want to share something with me. Cheers! <i class="icon-glass"></i>
+                   </p>
+                  <hr>
+                  <p class="al-center">
+                     © <script>document.write(new Date().getFullYear());</script> Sumit Oneness. All rights reserved | Made with <span id="k">❤ Anonymous_Pro_X ❤</span> Theme Structure Inspired By - BIPIN JITIYA
+                  </p>
+               </div>
+            </div>
+            <!-- DMCA PROTECTION -->
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=14e5c678-34aa-4e56-a7f4-c2aa4a89937c" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w150-5x1-06.png?ID=14e5c678-34aa-4e56-a7f4-c2aa4a89937c"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+      </div>
+
+
+      <div class="piece scanlines noclick"></div>
+      <div class="piece glow noclick"></div>
+      <script>const toggleSwitch=document.querySelector('.theme-switch input[type="checkbox"]');function switchTheme(e){if(e.target.checked){document.documentElement.setAttribute('data-theme','dark');document.getElementById("glitch").classList.add("glitch");document.getElementById("pic").src="./Sumit Oneness - files/img.jpg";localStorage.setItem('theme','dark');}else{document.documentElement.setAttribute('data-theme','light');document.getElementById("glitch").classList.remove("glitch");document.getElementById("pic").src="./Sumit Oneness - files/img.jpg";localStorage.setItem('theme','light');}}toggleSwitch.addEventListener('change',switchTheme,false);const currentTheme=localStorage.getItem('theme');if(currentTheme){document.documentElement.setAttribute('data-theme',currentTheme);if(currentTheme==='dark'){toggleSwitch.checked=true;document.getElementById("glitch").classList.add("glitch");document.getElementById("pic").src="./Sumit Oneness - files/img.jpg";}}</script>
+   
+
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="./Sumit Oneness - files/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div></body><link id="lite-css-list" rel="stylesheet" type="text/css" href="chrome-extension://hiajdlfgbgnnjakkbnpdhmhfhklkbiol/css/advert_skip.css"><style id="custom-css-list" type="text/css"></style></html>
